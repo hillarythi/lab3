@@ -9,11 +9,14 @@ function projectClick(e) { 
  	var containingProject = $(this).closest(".project");
     var description = $(containingProject).find(".project-description");
     if (description.length == 0) {
-       $(containingProject).append("<div class='project-description' id='toggle'><p>Description of the project.</p></div>");
+       $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
-     	$("#toggle").toggle();
+     	$(description).toggle();
     }
 }
+
+//find, list of all children 
+//closest, closest ancestor
 
 function initializePage(){
 	$("#testjs").click(function(e){
